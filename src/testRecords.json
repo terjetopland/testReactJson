@@ -2,16 +2,36 @@
     {
         "id": 1,
         "title": "title one",
-        "content": "Content one"
+        "content": "Content one",
+        "tech": [
+            {
+                "name": "JavaScript 1"
+            }
+        ]
     },
     {
         "id": 2,
         "title": "title two",
-        "content": "Content two"
+        "content": "Content two",
+        "tech": [
+            {
+                "name": "Typescript 2"
+            }
+        ]
     },
     {
         "id": 3,
         "title": "title three",
-        "content": "Content three"
+        "content": "Content three",
+        "tech": [
+            {
+                "name": "NodeJS 3",
+                "code": [
+                    {
+                        "name": "this is a third layer obj."
+                    }
+                ]
+            }
+        ]
     }
 ]

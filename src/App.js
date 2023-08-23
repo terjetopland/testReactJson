@@ -10,7 +10,28 @@ function App() {
           return(
             <div key={ record.id }>
               <strong>{ record.title }</strong><br/>
-              { record.content }
+              { record.content }<br/>
+              
+              
+              { record.tech && record.tech.map( secondary => {
+                return(
+                  <div key={ record.id }>
+                    -- { secondary.name } --
+                    { secondary.code && secondary.code.map( third => {
+                      return(
+                        <div>
+                          -- -- { third.name } -- --
+                        </div>
+                      )
+                    })}
+                    <br/><br/>
+                    </div> 
+                    
+                )
+                
+              }) }
+
+              
             </div>
           )
         })
