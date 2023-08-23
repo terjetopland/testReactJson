@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import TestRecords from './testRecords.json'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        // This syntax checks wheter its is some records before displaying it.
+        TestRecords && TestRecords.map( record => {
+          return(
+            <div key={ record.id }>
+              <strong>{ record.title }</strong><br/>
+              { record.content }
+            </div>
+          )
+        })
+      }
     </div>
   );
 }
