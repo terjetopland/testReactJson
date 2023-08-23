@@ -1,5 +1,5 @@
 import React from "react"
-import TestRecords from './testRecords.json'
+import TestRecords from '../testRecords.json'
 
 function JsonReader() {
     return(

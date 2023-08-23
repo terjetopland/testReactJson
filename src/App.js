@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import JsonReader from './JsonReader';
+import JsonReader from './components/JsonReader';
 
 
 function App() {
