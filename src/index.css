@@ -67,3 +67,10 @@ p {
 * {
   text-align: right;
 }
+
+.rotateText45Deg {
+  transform-origin: center;
+  
+  
+
+}

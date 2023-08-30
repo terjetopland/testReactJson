@@ -1,14 +1,18 @@
-import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Cell } from "recharts";
+import React from "react";
+import { PieChart, Pie, Cell, XAxis, Tooltip, ResponsiveContainer, Label } from "recharts";
 
 const data = [
-  { name: "Group A", value: 400, count: 1 },
-  { name: "Group B", value: 300, count: 2 },
-  { name: "Group C", value: 300, count: 3 },
-  { name: "Group D", value: 200, count: 4 }
+  { name: "Group A", value: 100, thumbsUpOrDown: 'up' },
+  { name: "Group B", value: 200, thumbsUpOrDown: 'down' },
+  { name: "Group C", value: 300, thumbsUpOrDown: 'up' },
+  { name: "Group D", value: 400, thumbsUpOrDown: 'up' },
+  { name: "Group E", value: 500, thumbsUpOrDown: 'down' },
+  { name: "Group F", value: 600, thumbsUpOrDown: 'up' }
+  
 ];
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const test = 't'
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -30,14 +34,16 @@ const renderCustomizedLabel = ({
         y={y}
         fill="white"
         textAnchor={x > cx ? "start" : "end"}
-        dominantBaseline="central"
-      >
+        dominantBaseline="middle"
+        style={{fontSize: '15px'}}
+        // className="rotateText45Deg"
+        >
         {/* {`${(percent * 100).toFixed(0)}%`} */}
-        {data[index].count}
+        {/* {data[index].thumbsUpOrDown} */}
+        {test}
       </text>
     );
   };
-
 
 export function Chart() {
   return (
@@ -48,15 +54,16 @@ export function Chart() {
         cy={250}
         labelLine={false}
         label={renderCustomizedLabel}
+        innerRadius={100}
         outerRadius={160}
         fill="#8884d8"
         dataKey="value"
-        valueKey='name'
       >
         {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
         ))}
       </Pie>
+      <Tooltip/>
     </PieChart>
   );
 }
