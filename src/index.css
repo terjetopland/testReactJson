@@ -95,7 +95,6 @@ p {
 
 .rotate-text {
   color: rgb(60, 104, 175);
-  transform: rotate(45deg);
   align-items: flex-start;
   }
 

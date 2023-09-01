@@ -2,15 +2,14 @@ export const CircleText = () => {
     
     function rotatText(someText) {
         let newText = [];
-        let rotateAngel = [];
         for(let i = 0; i < someText.length; i++) {
             newText += someText[i]
-            rotateAngel[i] += 10;
         }
         return (
             <div>{newText}</div>
         )
     }
+    
     return (
         <div className="container">
             <div className="circle-one">

@@ -8,6 +8,7 @@ import { keyboard } from '@testing-library/user-event/dist/keyboard';
 import { CircleText } from './components/CircleText';
 
 
+
 function App() {
   console.log(RandomJSONMAker(10))
   // const randomData = RandomJSONMAker(10)

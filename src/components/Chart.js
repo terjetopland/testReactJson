@@ -36,9 +36,6 @@ const renderCustomizedLabel = ({
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="middle"
         style={{fontSize: '15px'}}
-        rotate={y}
-        
-        // className="rotateText45Deg"
         >
         {/* {`${(percent * 100).toFixed(0)}%`} */}
         {/* {data[index].thumbsUpOrDown} */}
