@@ -5,6 +5,7 @@ import JsonReader from './components/JsonReader';
 import { Chart } from './components/Chart';
 import { RandomJSONMAker} from './components/RandomJSONMakerTemperature';
 import { keyboard } from '@testing-library/user-event/dist/keyboard';
+import { CircleText } from './components/CircleText';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <div className='gridItem span3Columns gridItem:rowChild'></div>
       </div>
       <Chart/>
+      <CircleText></CircleText>
       {/* <JsonReader/> */}
       </div>
     

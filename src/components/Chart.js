@@ -12,7 +12,7 @@ const data = [
 ];
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-const test = 't'
+const test = 'test'
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -36,6 +36,8 @@ const renderCustomizedLabel = ({
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="middle"
         style={{fontSize: '15px'}}
+        rotate={y}
+        
         // className="rotateText45Deg"
         >
         {/* {`${(percent * 100).toFixed(0)}%`} */}
